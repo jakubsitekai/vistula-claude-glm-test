@@ -1,0 +1,30 @@
+[
+  {
+    "version": "1.2.0",
+    "date": "2026-11-04",
+    "title": "Zadanie zespołowe (API na GitHub Pages) i ukryty self-check",
+    "description": "Proste zadanie zespołowe: strona na GitHub Pages z publicznym REST API (Supabase), z obowiązkowym formatem konta, config.json i otwartym CORS. Ukryta strona #/assignment-check automatycznie sprawdza pracę studenta (bez LLM) i zapisuje wyniki; prowadzący widzi je w nowej zakładce „Zadania”. Link do self-checku przekazuje wykładowca z panelu.",
+    "issue": "https://github.com/jakubsitekai/claude-glm/issues/24"
+  },
+  {
+    "version": "1.3.0",
+    "date": "2026-11-05",
+    "title": "Roster studentów i samodzielna zmiana danych potwierdzana e-mailem",
+    "description": "Lista studentów z dziekanatu (CSV/PDF) w bazie i w panelu prowadzącego. Student może zgłosić zmianę danych (np. login GitHub) — zmiana następuje dopiero po kliknięciu jednorazowego linku wysłanego na zarejestrowany adres e-mail (ważny 15 minut). Prowadzący widzi żądania, pełny audyt i może zatwierdzić zmianę ręcznie.",
+    "issue": "https://github.com/jakubsitekai/claude-glm/issues/25"
+  },
+  {
+    "version": "1.1.0",
+    "date": "2026-10-28",
+    "title": "Feedback studentów i zgłoszenia w panelu",
+    "description": "Studenci (także anonimowo) mogą zgłaszać uwagi o platformie: błąd, sugestię, brakującą funkcję lub inne. Prowadzący widzi zgłoszenia w panelu, zmienia ich status i może utworzyć z nich issue na GitHubie.",
+    "issue": "https://github.com/jakubsitekai/claude-glm/issues/7"
+  },
+  {
+    "version": "1.0.0",
+    "date": "2026-10-19",
+    "title": "Platforma quizowa na Supabase",
+    "description": "Logowanie e-mail/hasło (opcjonalnie GitHub), wiązanie identyfikatora studenta, quizy z losowaniem pytań, ocenianie po stronie serwera, panel prowadzącego (sesje, wyniki, bank pytań, role).",
+    "issue": "https://github.com/jakubsitekai/claude-glm/pull/3"
+  }
+]
