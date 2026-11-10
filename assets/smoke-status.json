@@ -1,9 +1,0 @@
-{
-  "environment": "preprod",
-  "status": "PASS",
-  "finished_at": "2026-11-09T14:48:29Z",
-  "run_url": "https://github.com/jakubsitekai/claude-glm/actions/runs/42638100635",
-  "failures": [],
-  "passed": 18,
-  "total": 18
-}
