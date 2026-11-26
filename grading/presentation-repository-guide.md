@@ -208,7 +208,7 @@ flowchart TD
     O --> L
 ```
 
-The presentation grade is not the final lecture grade. Passing Laboratory is required to pass Lecture. The semester project contributes to both grades. A minimum 120-minute presentation and assignment grade of at least 4.0 are necessary for a final lecture grade of 4.0 or higher, but do not guarantee it. Grades 3.0 and 3.5 may use the basic 40-minute presentation. For grades above 3.5, public deployment of the semester project and an individual practical assessment without AI assistance are required; an oral assessment may also be required. The semester project README must contain its working public URL, and actual screenshots must be included. See the assessment requirements.
+The presentation grade is not the final lecture grade. Passing Laboratory is required to pass Lecture. The semester project contributes to both grades. A minimum 120-minute presentation and assignment grade of at least 4.0 are necessary for a final lecture grade of 4.0 or higher, but do not guarantee it. Grades 3.0 and 3.5 may use the basic 40-minute presentation. For grades above 3.5, public deployment of the semester project and an individual practical assessment without AI assistance are required; an oral assessment may also be required. The application, including its backend and required services, must remain operational and publicly accessible from submission in Platon until at least the final course grade has been awarded; keeping it available until the end of the examination session is strongly recommended. The semester project README must contain its working public URL, and actual screenshots must be included. See the assessment requirements.
 
 ## 6. Submission checklist
 
