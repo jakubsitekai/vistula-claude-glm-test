@@ -130,6 +130,29 @@ For grades above 3.0, extend the basic application with meaningful functionality
 
 Examples of advanced challenges include a shared REST API with web and mobile clients, authentication and authorization, different persistence implementations, test payment integration, CI/CD or cooperation between several pairs developing interoperable components. These are alternatives, not a mandatory list. Use sandbox/test payments; paid developer accounts and real store publication are not required.
 
+### Optional project track – AI-Powered Applications
+
+Students may choose a conventional software application or an AI-powered application. Both tracks are eligible for all grades, including 5.0, in Java or Python. AI integration is optional and does not replace the common project requirements (working interface, REST API, persistence, documentation, collaboration and individual defence).
+
+| Project idea | Basic functional scope | Possible advanced extension |
+|---|---|---|
+| AI Quiz Generator | Enter educational text; generate questions and answers; validate, edit and save a quiz. | Structured JSON output, difficulty and question-count settings, duplicate detection, quality evaluation. |
+| AI Document Assistant | Upload or select demo documents, ask questions and save answers with source references. | RAG, chunking, embeddings, retrieval evaluation, grounded citations and handling unanswerable questions. |
+| Semantic Book Search | Manage a book catalogue and search descriptions by meaning. | Vector search with pgvector, metadata filters, keyword baseline and retrieval metrics. |
+| AI Task Manager | Manage tasks; suggest categories, priorities or subtasks. | Structured output validation, user approval, editable suggestions, comparison with rule-based logic. |
+| AI Code Review Assistant | Select a public/demo repository or diff; generate and store review suggestions. | GitHub API, severity filters, line references, evaluation against known issues; read-only integration. |
+| AI Recommendation System | Store user preferences and recommend items from a demo catalogue. | Compare recommendation methods, explain recommendations and evaluate on a small labelled dataset. |
+| Intelligent Customer Support | Ask questions about a demo knowledge base and save conversations. | RAG, escalation for unknown answers, read-only tool calling, evaluation and conversation history. |
+| Intelligent Image Classifier | Upload permitted demo images, classify using a pretrained model and store results. | Confidence thresholds, evaluation on labelled images, confusion matrix and comparison of models. |
+
+A pretrained model, external API or local model is sufficient; training your own model is not required. No paid API subscription, GPU purchase or cloud account is compulsory. Use a suitable free option, local runtime or approved shared infrastructure where available. Document model/runtime, configuration, limits and reproducible setup. Keep API credentials on the backend; use synthetic, public or properly licensed data, never confidential material. Handle unavailable models, malformed outputs and timeouts. A deterministic mock is useful for automated tests but is not a substitute for demonstrating a real AI feature.
+
+For higher grades, demonstrate meaningful AI integration, validation of model outputs, representative success and failure cases, repeatable tests and a reasoned evaluation of limitations. For 5.0, retain the common practical SQL requirement and demonstrate a substantial technical extension. Simply wrapping a chatbot API or generating the application's source code with AI does not guarantee a higher grade.
+
+During the individual defence, the lecturer may request a technology-independent change (e.g. add a difficulty selector, filter stored results, introduce output validation, persist a new field, add a test or change a REST endpoint). The student must make and verify the change independently, without AI coding assistance. Running the project's AI feature as part of a functional test is allowed; using it to generate the solution to the assessment task is not.
+
+The same application can support an assigned AI presentation topic if it meets the relevant specification. See [Presentation Topics](presentation-topics.md), A15–A24. The presentation remains a separate graded assignment.
+
 If your semester project also meets your assigned presentation topic, you may demonstrate the same application in the presentation rather than build another full application. Keep the presentation repository and its documentation separate; link to the exact demonstrated code version and include reproducible examples as required.
 
 Submit the shared project link once through the designated Platon submission area. Its assessment contributes to both final grades; neither grade is determined by the project alone.

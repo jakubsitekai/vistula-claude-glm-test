@@ -1,4 +1,4 @@
-# Presentation Topics – Web Application Development
+# Presentation Topics – Web and AI Application Development
 **Course: Team Project – IT**
 
 The purpose of this assignment is to independently explore an unfamiliar technical subject, evaluate reliable sources, understand how the technology works, and explain it clearly to other people. An IT engineer must be able to learn new technologies independently, verify examples and communicate technical knowledge. Follow the [assessment requirements](student-assessment-requirements.md).
@@ -18,7 +18,7 @@ Each presentation must have its own GitHub repository. Submit the repository lin
 - `presentation.pptx`: editable PowerPoint presentation with complete speaker notes for every narrated slide, matching the video. Optional: `presentation.pdf` as a convenient viewing copy; it does not replace the PPTX or notes.
 - `doc/`: architecture diagrams where relevant and screenshots of working application/API, startup and representative operations for any practical demonstration.
 - Source code for all demonstrated projects, in clearly named subdirectories when there is more than one.
-- For each runnable project: prerequisites (JDK, framework/build tool versions), exact build/run/test commands, dependencies, configuration and example environment file without secrets, sample data or DB setup, expected output and example requests. Use Maven/Gradle wrapper where practical.
+- For each runnable project: prerequisites (JDK or Python runtime, framework/build tool versions), exact build/run/test commands, dependencies, configuration and example environment file without secrets, sample data or DB setup, expected output and example requests. Use Maven/Gradle wrapper where practical.
 - For advanced work: describe architecture, API contract, persistence model, validation/error handling, automated tests and deployment or the approved local-only demo exception. Include URLs for hosted demos when required and screenshots showing actual execution, not AI-generated mockups.
 - References to official documentation and third-party material; respect licences. No secrets or real personal data. Use demo data. No paid subscription or store account is compulsory.
 
@@ -50,9 +50,9 @@ Time allocations are suggestions; total minimum is mandatory. Slides and notes s
 
 ## 2. Common advanced demo specification
 
-Except for the dedicated framework comparison topic (A04), each advanced team builds a small but complete application around a chosen domain (tasks, events, book catalogue, expenses, inventory, courses). Use a Java backend framework suitable for REST (Spring Boot, Quarkus, Micronaut, Javalin, Jakarta REST) and a web or mobile frontend. Explain end-to-end request flow and persistence. A topic-specific emphasis is mandatory; don't just repeat the same general CRUD tutorial. For A04, four compact, independently runnable local REST API examples satisfy the demo scope: no four full-stack apps, no mandatory frontend, separate databases or four hosted deployments.
+Except for the dedicated comparison topics (A04 and A24), each advanced team builds a small but complete application around a chosen domain (tasks, events, book catalogue, expenses, inventory, courses). For web topics A01–A14, use a Java backend framework suitable for REST (Spring Boot, Quarkus, Micronaut, Javalin, Jakarta REST) and a web or mobile frontend. For AI topics A15–A24, use Java or Python as specified by the topic, with a REST backend and suitable frontend; A24 has a compact comparison exception. Explain end-to-end request flow and persistence. A topic-specific emphasis is mandatory; don't just repeat the same general CRUD tutorial. For A04, four compact, independently runnable local REST API examples satisfy the demo scope: no four full-stack apps, no mandatory frontend, separate databases or four hosted deployments.
 
-Common minimum: list/detail, create/update/delete, validation and error messages; relational model with two related entities for SQL topics; representative test data; clear API contract (example below); persistence across reload; at least one automated API test and documented manual scenario. Web advanced track: host frontend and Java API, use hosted database if useful. Hosting platform is free choice, no paid services required; lecturer-approved alternative if free hosting unavailable. On 5.0 demonstrate practical SQL (schema, relationship, queries or comparison), meaningful extension and deeper technical explanation. Supabase PostgreSQL via backend JDBC or API is acceptable; never expose database credentials/service role keys. For basic examples direct browser-to-Supabase REST with public publishable key and appropriate RLS on demo data is sufficient. NoSQL emphasis can use MongoDB or another suitable hosted document store.
+Common minimum: list/detail, create/update/delete, validation and error messages; relational model with two related entities for SQL topics; representative test data; clear API contract (example below); persistence across reload; at least one automated API test and documented manual scenario. Web advanced track: host frontend and backend API, use hosted database if useful. Hosting platform is free choice, no paid services required; lecturer-approved alternative if free hosting unavailable. On 5.0 demonstrate practical SQL (schema, relationship, queries or comparison), meaningful extension and deeper technical explanation. Supabase PostgreSQL via backend JDBC or API is acceptable; never expose database credentials/service role keys. For basic examples direct browser-to-Supabase REST with public publishable key and appropriate RLS on demo data is sufficient. NoSQL emphasis can use MongoDB or another suitable hosted document store.
 
 Shared example contract (adapt resource name consistently): GET /api/tasks, GET /api/tasks/{id}, POST /api/tasks, PUT/PATCH /api/tasks/{id}, DELETE /api/tasks/{id}, GET /api/tasks?status=OPEN. JSON, 201/400/404/204 as appropriate, documented validation. Each team owns its domain and may choose equivalent endpoints. OpenAPI recommended for comparisons. Avoid needless two full systems: two clients may share one API, two backends may implement one contract, or one backend may switch persistence adapters.
 
@@ -154,14 +154,80 @@ For all four dedicated framework presentations, the framework itself is the cent
 
 Official framework documentation: [Spring Boot](https://docs.spring.io/spring-boot/), [Quarkus](https://quarkus.io/guides/), [Micronaut](https://docs.micronaut.io/), [Javalin](https://javalin.io/documentation).
 
-## 5. Deployment notes and references
+## 5. Optional AI presentation topics (A15–A24)
+
+All ten AI subjects are available in two versions: a **40-minute theoretical presentation** (assignment grade 3.0) or a **120-minute presentation with working practical examples** (assignment grades 4.0–5.0). The basic version covers the theory modules and illustrative examples without requiring a runnable application. The advanced version covers theory, architecture, code, actual demonstrations and verification. Use a Java or Python backend unless the topic specifies a particular language. The normal documentation, grading and oral assessment rules apply.
+
+You may reuse your semester project when it matches the assigned subject. No paid AI API, dedicated GPU or custom model training is compulsory. Use an appropriate local or available hosted model, document the model and configuration, and demonstrate an actual working AI feature. Keep credentials server-side, use permitted demo data, validate outputs and handle errors. Tests may use mocks to be repeatable; the actual demonstration must use a real model. For application-oriented topics targeting 5.0, include the common practical SQL requirement. A24 is a framework comparison and may use compact examples, with SQL as an optional extension.
+
+### A15 – Building LLM-Powered Applications in Java
+**Focus:** integrating language models into Java applications with Spring AI or LangChain4j.  
+**Theory:** LLM APIs, messages, model configuration, prompt templates, temperature, structured responses, service boundaries, secrets, error handling and testing.  
+**Demo:** Java REST service and frontend generating quiz questions or task suggestions. Validate output, persist results, allow user edits, show actual model response and API failures; document model setup and test with a fake provider.  
+**Stretch/5.0:** schema-validated output, SQL history, provider abstraction and repeatable evaluation.
+
+### A16 – Building LLM-Powered Applications in Python
+**Focus:** Python-based LLM integration, FastAPI/Flask/Django and a model SDK or suitable framework.  
+**Theory:** HTTP and model clients, prompt construction, response models, validation, synchronous/asynchronous requests, environment configuration and tests.  
+**Demo:** document summariser or task assistant with REST endpoints, simple frontend, persistent history, validated model outputs and error handling. Demonstrate clean setup with pinned dependencies.  
+**Stretch/5.0:** SQL persistence, provider-independent service, testable response schemas, timeout handling and evaluation.
+
+### A17 – Retrieval-Augmented Generation (RAG)
+**Focus:** answering questions using retrieved information.  
+**Theory:** ingestion, text extraction, chunking, embeddings, vector retrieval, context construction, citations, hallucinations and retrieval limitations.  
+**Demo:** AI Document Assistant with permitted demo documents, ingestion and query API, search and answer UI, persisted documents and source references. Demonstrate supported and unanswerable queries.  
+**Stretch/5.0:** compare chunk sizes or retrieval strategies, measure retrieval quality and groundedness on a fixed question set, SQL metadata.
+
+### A18 – Embeddings and Vector Databases
+**Focus:** semantic similarity and vector search.  
+**Theory:** embedding models, vectors, cosine similarity, distance metrics, indexing, metadata filters and keyword versus semantic search.  
+**Demo:** semantic book catalogue with CRUD, embedding generation, PostgreSQL/pgvector (or suitable vector store), search API and frontend. Compare keyword and semantic results using a small reproducible test set.  
+**Stretch/5.0:** SQL joins/filters, hybrid search, precision at k, measured indexing or query tradeoffs.
+
+### A19 – AI Agents and Tool Calling
+**Focus:** model-driven function calls, orchestration and controlled actions.  
+**Theory:** tools and schemas, model/tool interaction, execution loop, error handling, permission boundaries, prompt injection and human approval.  
+**Demo:** task assistant with read-only lookup tools and an explicitly confirmed task-creation action through the application's API. Persist actions and results; show rejected invalid tool calls and safe handling of untrusted text.  
+**Stretch/5.0:** SQL audit log, bounded execution, approval workflow, tests for malformed tool calls and unauthorized actions. Do not connect real financial or destructive operations.
+
+### A20 – Running AI Models Locally
+**Focus:** local model inference and application integration.  
+**Theory:** open-weight models and licences, inference runtimes (e.g. Ollama or llama.cpp), quantization, memory requirements, context, privacy, latency and API compatibility.  
+**Demo:** local model exposed via an API, connected to a Java/Python REST application and simple UI with saved requests/results. Document hardware and model selection, demonstrate real inference, handle unavailable runtime. A suitable approved shared local runtime is acceptable.  
+**Stretch/5.0:** compare two model configurations on the same hardware and dataset, measure response quality/latency, SQL request history.
+
+### A21 – Structured Output and Prompt Engineering
+**Focus:** reliable machine-readable model output.  
+**Theory:** prompt structure, examples, delimiters, schema design, JSON validation, retries, failure modes and untrusted input.  
+**Demo:** quiz generator or task extractor returning structured JSON, validated on the backend before saving; editable frontend, configurable number/category of results and error cases.  
+**Stretch/5.0:** SQL persistence, schema comparison, test corpus, measure valid-output rate and semantic accuracy separately.
+
+### A22 – Testing and Evaluating AI Applications
+**Focus:** measuring model-based application behaviour rather than assuming correctness.  
+**Theory:** deterministic application tests versus probabilistic model evaluation, test datasets, expected behaviour, quality metrics, regression checks, cost and latency, evaluation limitations.  
+**Demo:** small model-based classifier, extractor or question-answering application with a REST API, UI, saved test cases and results. Compare expected and actual outputs; automate repeatable tests with mocks and run a real-model evaluation.  
+**Stretch/5.0:** SQL evaluation history, compare prompts/models on a fixed dataset, report measured results and failure categories.
+
+### A23 – Machine Learning and Recommendation Systems
+**Focus:** classical ML or recommendation techniques integrated into software.  
+**Theory:** feature representation, supervised learning or recommendation methods, training/test separation, baselines, model evaluation, bias and limitations.  
+**Demo:** catalogue recommendation or classification system using a pretrained model or a small reproducible dataset and appropriate algorithm, REST prediction/recommendation API, user-facing interface and persisted results.  
+**Stretch/5.0:** compare baseline and alternative, report suitable metrics on held-out data, SQL catalogue/preferences, explain cold-start or classification errors.
+
+### A24 – Spring AI vs LangChain4j
+**Focus:** comparing Java LLM integration frameworks using the same model and task.  
+**Theory:** model clients, dependency/configuration, prompts, structured output, tool and retrieval abstractions, testability, framework tradeoffs.  
+**Demo:** two small independently runnable Java REST projects implementing the same quiz generation or structured extraction endpoint, one Spring AI and one LangChain4j. Use a common input/output contract, model configuration and test scenarios. A full frontend, separate databases and two hosted deployments are not required; show real requests and responses.  
+**Stretch/5.0:** shared automated contract verification, same model and test corpus, measured output validity and documented implementation differences. SQL is an optional comparison extension.
+
+## 6. Deployment notes and references
 
 - Angular and React client-side SPAs can run on GitHub Pages. Angular build must use the correct project base href; React/Vite set base to /REPO/ for project Pages. Use hash routing (Angular withHashLocation; React HashRouter) or explicitly handle static-host deep links; GitHub Pages is not a Java/Node server and does not provide a general SPA rewrite. Publish built assets rather than raw source.
-- Java API must run on separate server/container hosting for advanced web track. Students may choose a suitable free-tier service or approved alternative; verify quotas and cold starts before requiring any specific service. SQL/NoSQL can be hosted independently. Configure CORS correctly.
+- Java or Python API must run on separate server/container hosting for advanced web track. Students may choose a suitable free-tier service or approved alternative; verify quotas and cold starts before requiring any specific service. SQL/NoSQL can be hosted independently. Configure CORS correctly.
 - Mobile: Google Play internal testing still needs a developer account; Android APK emulator/device demo can be done without one. Apple free Xcode personal-team testing has limitations; TestFlight/App Store distribution requires appropriate membership. Accredited educational institutions may be eligible for Apple fee waiver. Do not require personal payment. Use test tracks/sandbox, not real payment transactions.
 - Official references: [Angular deployment](https://angular.dev/tools/cli/deployment), [Angular routing](https://angular.dev/guide/routing/router-reference), [Vite static deploy](https://vite.dev/guide/static-deploy), [Google Play testing](https://support.google.com/googleplay/android-developer/answer/9845334), [Apple membership](https://developer.apple.com/help/account/membership/programs-overview/), [Apple enrolment](https://developer.apple.com/help/account/membership/program-enrollment).
 
-## 6. Topic allocation and team work
+## 7. Topic allocation and team work
 
 The lecturer will assign topics to students or teams. A separate allocation list will be provided. Do not assume that every team must cover every topic. The same assigned subject can be addressed at basic or advanced depth; confirm the appropriate specification with the lecturer if necessary.
 

@@ -91,7 +91,7 @@ What should a viewer understand after watching the presentation?
 Purpose, architecture, components, design decisions and limitations.
 
 ## Prerequisites and setup (if applicable)
-JDK, framework/build tool versions, database configuration, example data.
+JDK or Python runtime, framework/build tool versions, database configuration, example data. For AI demos: model/runtime, model configuration, required environment variables and evaluation setup.
 Exact commands to build, run and test each demonstrated project.
 Expected URLs, ports and output.
 
@@ -180,6 +180,20 @@ flowchart TD
     API --> DB[(Shared database)]
 ```
 
+### AI-powered application (optional track)
+
+```mermaid
+flowchart TD
+    UI[Web or mobile frontend] -->|REST / JSON| API[Java or Python backend]
+    API --> DB[(SQL database / optional vector store)]
+    API --> AI[AI integration service]
+    AI --> MODEL[Local or hosted model]
+    AI --> VALID[Output validation and error handling]
+    VALID --> API
+```
+
+Document the model, configuration, input/output contract, data sources, limitations and evaluation. Keep secrets server-side. Include real demonstration evidence, representative success and failure cases, and reproducible tests. No paid provider is compulsory.
+
 ## 5. Final lecture grade
 
 ```mermaid
@@ -218,5 +232,6 @@ The presentation grade is not the final lecture grade. The shared semester proje
 - [ ] Database setup and sample data where applicable
 - [ ] Tests and deployment evidence as required by the assigned topic
 - [ ] No credentials, private keys or real personal data committed
+- [ ] For AI demonstrations: real model execution, model/runtime setup, output validation, error cases and evaluation evidence documented
 
 See [Presentation Topics](presentation-topics.md) and [Assessment and Passing Requirements](student-assessment-requirements.md) for the complete assessment rules.
