@@ -2,19 +2,13 @@
 
 ## 1. General principles
 
-The course consists of three separately assessed components:
-
-- Laboratory
-- Lecture
-- Project
-
-Each component has its own final grade. The same application or source code may be used as a basis for more than one component where the requirements permit, but submitting it does not automatically pass all three components.
+The course has two final grades: **Laboratory** and **Lecture**. The semester project is a shared assignment contributing to both grades; there is no separate final project grade. You prepare one semester project, not two. The same application can also support the presentation where it meets the assigned topic requirements. Each final grade has its own assessment criteria.
 
 The aim is to develop genuine technical understanding, the ability to work with software engineering tools, independent learning and the ability to explain, verify and modify software.
 
 AI tools are permitted when preparing assignments, projects and presentations. You remain responsible for correctness, security, reproducibility and your own understanding. **AI-generated work that you cannot explain or modify is not sufficient for a higher grade.**
 
-**For any final grade above 3.0 in any of the three components, an individual oral assessment is mandatory.** Depending on the component, you will be expected to explain your own work, answer technical questions and, for laboratory and project assessment, independently modify or extend code without AI assistance. Tests, submitted assignments and team results alone do not guarantee a higher grade. No AI assistance is permitted during individual assessments unless explicitly authorised for a different exercise.
+**For any final grade above 3.0 in either component, an individual oral assessment is mandatory.** Depending on the component, you will be expected to explain your own work, answer technical questions and, for laboratory and the shared project assessment, independently modify or extend code without AI assistance. Tests, submitted assignments and team results alone do not guarantee a higher grade. No AI assistance is permitted during individual assessments unless explicitly authorised for a different exercise.
 
 Previously announced alternative arrangements and attendance exceptions remain valid within their original scope. Individually approved study arrangements will be respected.
 
@@ -26,6 +20,7 @@ Previously announced alternative arrangements and attendance exceptions remain v
 - Complete and submit the following basic assignments in accordance with their instructions on Platon:
   1. **First Java CRUD**
   2. **Practical Assignment 1 – Task Manager & Team Collaboration**
+- Complete the basic version of the shared semester project described in Section 4, subject to previously announced alternative arrangements.
 - Complete the required laboratory activities and attend any announced compulsory assessments.
 - Submit working solutions through Platon, not by email. Follow the required repository structure, GitHub collaboration and submission instructions.
 
@@ -38,7 +33,7 @@ In addition to the basic requirements, complete both advanced assignments:
 1. **First Java CRUD – REST API Extension**
 2. **Practical Assignment – Advanced Task Manager & Team Collaboration**
 
-These additional assignments are not required for students aiming only for 3.0. Use separate repositories as described in the assignment instructions.
+These additional assignments are not required for students aiming only for 3.0. Use separate repositories as described in the assignment instructions. For a higher grade, also complete the advanced version of the shared semester project and pass its individual defence (Section 4).
 
 An individual oral and practical assessment is mandatory for a higher grade. You may be asked to locate and explain code, demonstrate Git operations, modify REST endpoints or database queries, add a small feature, diagnose a problem or fix a bug. These tasks must be completed independently without AI.
 
@@ -54,7 +49,7 @@ The grade depends on demonstrated individual competence, not simply on the compl
 
 ## 3. Lecture – passing requirements
 
-The final lecture grade will be based on the mandatory presentation assignment, assessed tests/quizzes (including colloquia), and an examination. The examination may include an oral part; an individual oral assessment is mandatory for any final grade above 3.0. The presentation is a separately graded assignment with a significant impact on the final lecture grade. It does not replace the other assessments.
+The final lecture grade will be based on the mandatory presentation assignment, the shared semester project, assessed tests/quizzes (including colloquia), and an examination. The examination may include an oral part; an individual oral assessment is mandatory for any final grade above 3.0. The presentation is a separately graded assignment with a significant impact on the final lecture grade. It does not replace the other assessments.
 
 Lecture attendance is not mandatory under the previously announced rules. Attendance at scheduled assessments may be required.
 
@@ -94,50 +89,50 @@ The detailed practical requirements depend on the assigned topic. For example, t
 
 ### Final lecture grade
 
-To pass the lecture, complete the mandatory presentation and satisfy the requirements of the announced tests and examination. **To obtain any final lecture grade above 3.0, including 3.5, you must earn at least 4.0 for the presentation assignment and successfully complete the individual oral assessment.**
+To pass the lecture, complete the mandatory presentation, the basic shared semester project and satisfy the requirements of the announced tests and examination, subject to previously announced alternatives. **To obtain any final lecture grade above 3.0, including 3.5, you must earn at least 4.0 for the presentation assignment, complete the advanced shared semester project and successfully complete the individual oral assessment.**
 
 The grade for the presentation is not the final lecture grade. Even a presentation graded 5.0 does not guarantee a final grade of 5.0. Final assessment dates, test thresholds and the exact weighting of the components will be communicated separately.
 
-## 4. Project – passing requirements
+## 4. Shared semester project – assessed within Laboratory and Lecture
 
-### Objective
+There is no separate final project grade. **Complete one semester project in a team of two**, unless a different arrangement is approved. The project contributes to both final grades. The laboratory assessment focuses on practical implementation and independent code changes; the lecture assessment focuses on understanding the architecture, technologies and design decisions. A single individual defence may provide evidence for both grades.
 
-Design, implement, document and deliver a working software application. Demonstrate collaboration, technical decisions and the ability to deliver a reproducible solution.
+### Basic version (grade 3.0)
 
-Work in teams of two unless a different arrangement is approved. Larger integrated projects may involve several cooperating pairs, provided that each pair has a clearly defined component and each student's individual contribution is identifiable.
+Create a working MVP (Minimum Viable Product) in a new GitHub repository. You may start from an earlier application and extend or adapt its code; keep the original submission unchanged.
 
-### Minimum requirements for grade 3.0
-
-Create a working MVP (Minimum Viable Product) in a new GitHub repository for the project. You may start from a previous assignment and extend or adapt its code; do not modify the original submission as part of the new project.
-
-A basic web application may use HTML, CSS, JavaScript and a hosted database/API such as Supabase, deployed using GitHub Pages. Other suitable technologies are also allowed. A basic project should have:
-
-- A clear purpose, a working interface and at least one meaningful user workflow.
-- Persistent data storage and functional create/read/update/delete operations where appropriate to the domain.
-- A working deployment or another agreed reproducible demonstration.
-- Source code, a README describing functionality, architecture, authors and contributions, setup/run instructions, screenshots and demonstration link.
+- A clear purpose, working web or mobile interface and a meaningful user workflow.
+- A backend exposing a REST API, with persistent data storage and functional CRUD operations appropriate to the domain.
+- A working deployment or an agreed reproducible demonstration.
+- A README describing functionality, architecture, authors and individual contributions, exact setup/run instructions, API examples, screenshots and demonstration link.
 - Evidence of collaboration through Git commits and Pull Requests.
-- A demonstration showing that the application works.
 
-Submit your project link through Platon according to the project submission instructions.
+Previously announced alternative assessment routes remain valid within their original scope.
 
-### Higher grades – advanced project and individual defence
+### Technology choices
 
-For a grade above 3.0, extend the basic application with meaningful additional functionality and technical depth. An individual oral and practical project defence without AI assistance is mandatory.
+- **Java is the preferred backend language.** You may use Spring Boot, Quarkus, Micronaut, Javalin or another suitable Java framework.
+- Python is an alternative backend option (e.g. FastAPI, Flask or Django) for the standard project route up to grade 4.0. To be eligible for a final grade of 4.5 or 5.0 through this route, the project backend must be implemented in Java.
+- Frontend technology is your choice: HTML/CSS/JavaScript, Angular, React, Vue or a suitable mobile framework. SQL databases are preferred; PostgreSQL/Supabase is acceptable. A NoSQL database is also possible where appropriate.
+- The Python option applies to the semester project, not to previously assigned Java-specific tasks or presentation topics. The technology choice does not automatically determine the grade.
 
-An advanced project may use a Java REST backend (Spring Boot, Quarkus, Micronaut, Javalin or another suitable Java framework), a web frontend (Angular, React, Vue or equivalent), a mobile client, SQL or NoSQL persistence, authentication/authorization, tests and deployment. Choose technologies appropriate to the project; do not add unnecessary complexity.
+### Advanced version and individual defence
 
-| Final project grade | Assessment criteria |
+For grades above 3.0, extend the basic application with meaningful functionality and technical depth. **An individual oral and practical defence without AI assistance is mandatory.** You may be asked to explain source code, architecture, API and database, demonstrate tests, modify an endpoint or query, implement a small feature or fix a bug.
+
+| Target final grade | Project evidence required (necessary, not sufficient) |
 |---|---|
-| 3.0 | Working basic MVP, complete documentation and evidence of collaboration. |
-| 3.5 | Basic requirements plus a meaningful functional improvement and satisfactory individual defence. |
-| 4.0 | Extended application with coherent architecture, persistent data, documented interfaces, practical functionality and good individual defence. |
-| 4.5 | Well-integrated application, more advanced functionality, meaningful automated tests, robust error handling and very good individual defence. |
-| 5.0 | Substantial technical challenge, high-quality integrated implementation, clear architecture, reproducible deployment, practical verification and excellent individual defence. |
+| 3.0 | Working basic MVP, documentation and collaboration. |
+| 3.5 | Meaningful functional improvement and satisfactory individual defence. Java or Python. |
+| 4.0 | Extended application, coherent architecture, persistent data, documented REST API, validation, tests and good individual defence. Java or Python. |
+| 4.5 | Java backend, well-integrated application, advanced functionality, meaningful automated tests, robust error handling and very good individual defence. |
+| 5.0 | Java backend, practical SQL, substantial technical challenge, high-quality integrated implementation, clear architecture, reproducible deployment and excellent individual defence. |
 
-Examples of advanced challenges include a shared REST API with web and mobile clients, alternative frontends or persistence implementations, secure multi-user applications, test payment integration, or cooperation between several pairs developing interoperable components. These are alternatives, not a mandatory list of technologies. Real store publication and paid developer accounts are not required. Payments should use sandbox/test environments.
+Examples of advanced challenges include a shared REST API with web and mobile clients, authentication and authorization, different persistence implementations, test payment integration, CI/CD or cooperation between several pairs developing interoperable components. These are alternatives, not a mandatory list. Use sandbox/test payments; paid developer accounts and real store publication are not required.
 
-During the defence, you may be asked to explain the architecture, API, database, source code and contribution, and independently implement a change or fix a problem.
+If your semester project also meets your assigned presentation topic, you may demonstrate the same application in the presentation rather than build another full application. Keep the presentation repository and its documentation separate; link to the exact demonstrated code version and include reproducible examples as required.
+
+Submit the shared project link once through the designated Platon submission area. Its assessment contributes to both final grades; neither grade is determined by the project alone.
 
 ## 5. Submissions, deadlines and assessment organisation
 

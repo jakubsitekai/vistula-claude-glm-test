@@ -186,13 +186,14 @@ flowchart TD
 flowchart TD
     P[Mandatory graded presentation] --> L[Final lecture grade]
     T[Assessed tests and colloquia] --> L
+    S[Shared semester project] --> L
     E[Examination] --> L
     P --> G{Final grade above 3.0?}
     G -->|Yes| O[Presentation grade at least 4.0<br/>and individual oral assessment]
     O --> L
 ```
 
-The presentation grade is not the final lecture grade. A minimum 120-minute presentation and assignment grade of at least 4.0 are necessary for a final lecture grade above 3.0, but do not guarantee it.
+The presentation grade is not the final lecture grade. The shared semester project also contributes to both Laboratory and Lecture; there is no separate final project grade. A minimum 120-minute presentation and assignment grade of at least 4.0 are necessary for a final lecture grade above 3.0, but do not guarantee it.
 
 ## 6. Submission checklist
 
