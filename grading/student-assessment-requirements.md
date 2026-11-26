@@ -111,22 +111,22 @@ Previously announced alternative assessment routes remain valid within their ori
 
 ### Technology choices
 
-- **Java is the preferred backend language.** You may use Spring Boot, Quarkus, Micronaut, Javalin or another suitable Java framework.
-- Python is an alternative backend option (e.g. FastAPI, Flask or Django) for the standard project route up to grade 4.0. To be eligible for a final grade of 4.5 or 5.0 through this route, the project backend must be implemented in Java.
+- **Java is the recommended backend language.** You may use Spring Boot, Quarkus, Micronaut, Javalin or another suitable Java framework.
+- **Python is an equally valid alternative** (e.g. FastAPI, Flask or Django). Both Java and Python are eligible for all grades, including 5.0, subject to the same functional, architectural, testing and individual assessment requirements.
 - Frontend technology is your choice: HTML/CSS/JavaScript, Angular, React, Vue or a suitable mobile framework. SQL databases are preferred; PostgreSQL/Supabase is acceptable. A NoSQL database is also possible where appropriate.
-- The Python option applies to the semester project, not to previously assigned Java-specific tasks or presentation topics. The technology choice does not automatically determine the grade.
+- The Python option applies to the semester project, not to previously assigned Java-specific tasks or presentation topics. The choice between Java and Python does not limit the maximum grade.
 
 ### Advanced version and individual defence
 
-For grades above 3.0, extend the basic application with meaningful functionality and technical depth. **An individual oral and practical defence without AI assistance is mandatory.** You may be asked to explain source code, architecture, API and database, demonstrate tests, modify an endpoint or query, implement a small feature or fix a bug.
+For grades above 3.0, extend the basic application with meaningful functionality and technical depth. **An individual oral and practical defence without AI assistance is mandatory.** You may be asked to explain source code, architecture, API and database, demonstrate tests, modify an endpoint or query, implement a small feature or fix a bug. Tasks will be defined in terms of expected behaviour and verified through working results and your explanation, regardless of the chosen language. You are responsible for knowing your chosen technology and completing changes independently; language-specific help is not guaranteed.
 
 | Target final grade | Project evidence required (necessary, not sufficient) |
 |---|---|
 | 3.0 | Working basic MVP, documentation and collaboration. |
 | 3.5 | Meaningful functional improvement and satisfactory individual defence. Java or Python. |
 | 4.0 | Extended application, coherent architecture, persistent data, documented REST API, validation, tests and good individual defence. Java or Python. |
-| 4.5 | Java backend, well-integrated application, advanced functionality, meaningful automated tests, robust error handling and very good individual defence. |
-| 5.0 | Java backend, practical SQL, substantial technical challenge, high-quality integrated implementation, clear architecture, reproducible deployment and excellent individual defence. |
+| 4.5 | Well-integrated application, advanced functionality, meaningful automated tests, robust error handling and very good individual defence. Java or Python. |
+| 5.0 | Practical SQL, substantial technical challenge, high-quality integrated implementation, clear architecture, reproducible deployment and excellent individual defence. Java or Python. |
 
 Examples of advanced challenges include a shared REST API with web and mobile clients, authentication and authorization, different persistence implementations, test payment integration, CI/CD or cooperation between several pairs developing interoperable components. These are alternatives, not a mandatory list. Use sandbox/test payments; paid developer accounts and real store publication are not required.
 
